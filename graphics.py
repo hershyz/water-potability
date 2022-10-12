@@ -13,6 +13,12 @@ features = []
 for i in range(0, len(feature_line) - 1):
     features.append(feature_line[i])
 
+# scatter plots
 for feature in features:
     pandas_df.plot(kind='scatter', x=feature, y=output)
+    plt.show()
+
+# box plots
+for feature in features:
+    pandas_df[feature].plot(kind='box')
     plt.show()
