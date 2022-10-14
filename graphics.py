@@ -15,10 +15,12 @@ for i in range(0, len(feature_line) - 1):
 
 # scatter plots
 for feature in features:
+    print('scatter plot - ' + feature)
     pandas_df.plot(kind='scatter', x=feature, y=output)
     plt.show()
 
 # box plots
 for feature in features:
+    print('box plot - ' + feature)
     pandas_df[feature].plot(kind='box')
     plt.show()
